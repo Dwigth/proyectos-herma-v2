@@ -1,0 +1,14 @@
+{
+  "name": "proyectosherma",
+  "version": "1.0.0",
+  "description": "Pagina promocional de la empresa Proyectos Herma",
+  "main": "assets/js/index.bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dwigth Astacio Hernández, Mario Erick Barrera Palacios",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^16.3.0"
+  }
+}

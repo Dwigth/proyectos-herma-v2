@@ -31,20 +31,51 @@
     border-radius: 4px;
     position: fixed;
     /* box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.3);  */
+    letter-spacing: 15px;
     z-index: 2;
     color: white;
     margin: auto;
     padding: 10px;
     top: 0; left: 0; bottom: 0; right: 0;
     font-size: 80px;
+    /* cursor: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiB2aWV3Qm94PSIwIDAgNjQwIDY0MCIgd2lkdGg9IjY0MCIgaGVpZ2h0PSI2NDAiPjxkZWZzPjxwYXRoIGQ9Ik0zMDQuMTEgMjc0Ljk4QzMyMi4yMSAyNzQuOTggMzM2Ljg4IDI4OS42NSAzMzYuODggMzA3Ljc1QzMzNi44OCAzMzkuMTQgMzM2Ljg4IDQwMC41NCAzMzYuODggNDMxLjk0QzMzNi44OCA0NTAuMDQgMzIyLjIxIDQ2NC43MSAzMDQuMTEgNDY0LjcxQzI0NC40MiA0NjQuNzEgOTguMTIgNDY0LjcxIDM4LjQzIDQ2NC43MUMyMC4zNCA0NjQuNzEgNS42NiA0NTAuMDQgNS42NiA0MzEuOTRDNS42NiA0MDAuNTQgNS42NiAzMzkuMTQgNS42NiAzMDcuNzVDNS42NiAyODkuNjUgMjAuMzQgMjc0Ljk4IDM4LjQzIDI3NC45OEM5OC4xMiAyNzQuOTggMjQ0LjQyIDI3NC45OCAzMDQuMTEgMjc0Ljk4WiIgaWQ9ImRPOE5xOGVHIj48L3BhdGg+PHBhdGggZD0iTTI3NS43OCAyMTMuODhDMjg5LjEgMjEzLjg4IDI5OS45IDIyNC42OCAyOTkuOSAyMzhDMjk5LjkgMjc1LjYyIDI5OS45IDM2NC4zOCAyOTkuOSA0MDJDMjk5LjkgNDE1LjMyIDI4OS4xIDQyNi4xMiAyNzUuNzggNDI2LjEyQzI3MC45NiA0MjYuMTIgMjgwLjYxIDQyNi4xMiAyNzUuNzggNDI2LjEyQzI2Mi40NiA0MjYuMTIgMjUxLjY3IDQxNS4zMiAyNTEuNjcgNDAyQzI1MS42NyAzNjQuMzggMjUxLjY3IDI3NS42MiAyNTEuNjcgMjM4QzI1MS42NyAyMjQuNjggMjYyLjQ2IDIxMy44OCAyNzUuNzggMjEzLjg4QzI4MC42MSAyMTMuODggMjcwLjk2IDIxMy44OCAyNzUuNzggMjEzLjg4WiIgaWQ9ImZiQmRoVGZsRCI+PC9wYXRoPjxwYXRoIGQ9Ik00MDEuMiAyMTMuODhDNDEyLjc0IDIxMy44OCA0MjIuMSAyMjMuMjQgNDIyLjEgMjM0Ljc4QzQyMi4xIDIzOC45NiA0MjIuMSAyMzAuNiA0MjIuMSAyMzQuNzhDNDIyLjEgMjQ2LjMzIDQxMi43NCAyNTUuNjkgNDAxLjIgMjU1LjY5QzM3MS4yOSAyNTUuNjkgMzAyLjQ3IDI1NS42OSAyNzIuNTcgMjU1LjY5QzI2MS4wMiAyNTUuNjkgMjUxLjY3IDI0Ni4zMyAyNTEuNjcgMjM0Ljc4QzI1MS42NyAyMzAuNiAyNTEuNjcgMjM4Ljk2IDI1MS42NyAyMzQuNzhDMjUxLjY3IDIyMy4yNCAyNjEuMDIgMjEzLjg4IDI3Mi41NyAyMTMuODhDMzAyLjQ3IDIxMy44OCAzNzEuMjkgMjEzLjg4IDQwMS4yIDIxMy44OFoiIGlkPSJvMkxRUWt4aFlWIj48L3BhdGg+PHBhdGggZD0iTTU3OS42NyAxNzUuMjlDNjA5Ljg2IDE3NS4yOSA2MzQuMzQgMTk5Ljc3IDYzNC4zNCAyMjkuOTZDNjM0LjM0IDI0MC44OSA2MzQuMzQgMjE5LjAzIDYzNC4zNCAyMjkuOTZDNjM0LjM0IDI2MC4xNSA2MDkuODYgMjg0LjYzIDU3OS42NyAyODQuNjNDNTM0LjY1IDI4NC42MyA0NTQuMjYgMjg0LjYzIDQwOS4yNCAyODQuNjNDMzc5LjA0IDI4NC42MyAzNTQuNTcgMjYwLjE1IDM1NC41NyAyMjkuOTZDMzU0LjU3IDIxOS4wMyAzNTQuNTcgMjQwLjg5IDM1NC41NyAyMjkuOTZDMzU0LjU3IDE5OS43NyAzNzkuMDQgMTc1LjI5IDQwOS4yNCAxNzUuMjlDNDU0LjI2IDE3NS4yOSA1MzQuNjUgMTc1LjI5IDU3OS42NyAxNzUuMjlaIiBpZD0iZzFPeU9rYmxKeSI+PC9wYXRoPjwvZGVmcz48Zz48Zz48Zz48dXNlIHhsaW5rOmhyZWY9IiNkTzhOcThlRyIgb3BhY2l0eT0iMSIgZmlsbD0iI2Q2ZDZkNiIgZmlsbC1vcGFjaXR5PSIxIj48L3VzZT48L2c+PGc+PHVzZSB4bGluazpocmVmPSIjZmJCZGhUZmxEIiBvcGFjaXR5PSIxIiBmaWxsPSIjYTZhNmE2IiBmaWxsLW9wYWNpdHk9IjEiPjwvdXNlPjwvZz48Zz48dXNlIHhsaW5rOmhyZWY9IiNvMkxRUWt4aFlWIiBvcGFjaXR5PSIxIiBmaWxsPSIjYTZhNmE2IiBmaWxsLW9wYWNpdHk9IjEiPjwvdXNlPjwvZz48Zz48dXNlIHhsaW5rOmhyZWY9IiNnMU95T2tibEp5IiBvcGFjaXR5PSIxIiBmaWxsPSIjOTc2YjQ4IiBmaWxsLW9wYWNpdHk9IjEiPjwvdXNlPjwvZz48L2c+PC9nPjwvc3ZnPg=='),none; */
 }
-
 .slide-left {
     position: absolute;
 	/* -webkit-animation: slide-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
 	        animation: slide-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
+.siguiente {
+  font-family: primaryf;
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  /* font-weight: bold; */
+  border-radius: 50%;
+  box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.5);
+  border: none;
+  bottom: -150px;
+  right: 30px;
+  position: absolute;
+  visibility: visible;
+  z-index: 1;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.skip {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin: auto;
+  z-index: 2;
+  font-family: primaryf;
+  font-size: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
 @-webkit-keyframes slide-left {
     0% {
       /* -webkit-transform: translateX(0); */

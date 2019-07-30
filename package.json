@@ -9,6 +9,8 @@
   "author": "Dwigth Astacio Hernández, Mario Erick Barrera Palacios",
   "license": "MIT",
   "dependencies": {
+    "@types/animejs": "^2.0.2",
+    "animejs": "^3.1.0",
     "browserify": "^16.3.0"
   }
 }

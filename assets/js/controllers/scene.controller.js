@@ -11,8 +11,9 @@ var SceneController = /** @class */ (function () {
     SceneController.prototype.setInitialScene = function () {
         //Crear video
         var videoElem = document.createElement('video');
-        videoElem.src = './assets/videos/Promocional_Proyectos_herma.mp4';
+        videoElem.src = './assets/videos/Proyectos_herma_promo.mp4';
         videoElem.classList.add('promo-video');
+        videoElem.muted = true;
         videoElem.play();
         videoElem.loop = true;
         //Nombre de compañia

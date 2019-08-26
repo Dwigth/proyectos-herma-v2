@@ -4,13 +4,16 @@
   "description": "Pagina promocional de la empresa Proyectos Herma",
   "main": "assets/js/index.bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify assets/js/app.js -o assets/js/app.bundle.js"
   },
   "author": "Dwigth Astacio Hernández, Mario Erick Barrera Palacios",
   "license": "MIT",
   "dependencies": {
     "@types/animejs": "^2.0.2",
+    "@types/express": "^4.17.1",
     "animejs": "^3.1.0",
-    "browserify": "^16.3.0"
+    "browserify": "^16.3.0",
+    "express": "^4.17.1"
   }
 }

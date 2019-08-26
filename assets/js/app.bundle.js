@@ -1,24 +1,21 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * Diseño: Mario Erick Barrera Palacios.
+ * Diseño y programación: Dwigth Astacio Hernández.
+ */
+var scene_controller_1 = require("./controllers/scene.controller");
+var app = new scene_controller_1.SceneController();
+app.Init();
+
+},{"./controllers/scene.controller":2}],2:[function(require,module,exports){
+"use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var scene_controller_1 = require("./controllers/scene.controller");
 var animejs_1 = __importDefault(require("animejs"));
-var app = new scene_controller_1.SceneController();
-app.Init();
-animejs_1.default({
-    targets: '.siguiente',
-    translateY: -250,
-    delay: 2000,
-    easing: 'easeInOutExpo',
-    rotate: '1turn'
-});
-
-},{"./controllers/scene.controller":2,"animejs":3}],2:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var SceneController = /** @class */ (function () {
     function SceneController() {
         this.appContainer = document.querySelector('#app');
@@ -26,8 +23,16 @@ var SceneController = /** @class */ (function () {
     }
     SceneController.prototype.Init = function () {
         this.setInitialScene();
+        animejs_1.default({
+            targets: '.siguiente',
+            translateY: -250,
+            delay: 2000,
+            easing: 'easeInOutExpo',
+            rotate: '1turn'
+        });
     };
     SceneController.prototype.setInitialScene = function () {
+        var _this = this;
         //Crear video
         var videoElem = document.createElement('video');
         videoElem.src = './assets/videos/Proyectos_herma_promo.mp4';
@@ -41,16 +46,29 @@ var SceneController = /** @class */ (function () {
         companiaElem.textContent = 'PROYECTOS HERMA';
         this.appContainer.append(videoElem, companiaElem);
         this.appContainer.style.backgroundClip = 'url("./videos/Promocional_Proyectos_herma.mp4")';
-        videoElem.addEventListener('click', function () {
+        var elem = document.getElementById('next');
+        elem.addEventListener('click', function () {
+            console.log('hello');
+            animejs_1.default({
+                targets: '.siguiente',
+                translateY: 250,
+                easing: 'easeInOutExpo',
+                rotate: '1turn'
+            });
+        });
+        elem.addEventListener('click', function () {
             //llevarlo a la siguiente escena
-            // this.appContainer.classList.add('slide-left');
+            _this.appContainer.classList.add('slide-left');
+            setTimeout(function () {
+                location.assign('https://proyectosherma.com.mx/contacto.html');
+            }, 2000);
         });
     };
     return SceneController;
 }());
 exports.SceneController = SceneController;
 
-},{}],3:[function(require,module,exports){
+},{"animejs":3}],3:[function(require,module,exports){
 /*
  * anime.js v3.1.0
  * (c) 2019 Julian Garnier

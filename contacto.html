@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="contacto">
+            <label class="company-name" style="color: black !important" for="">
+                Contáctese con nosotros
+                <input type="email" class="IEmailContacto" placeholder="Introduzca su correo electrónico">
+                <button class="BEmailContacto" type="button">Enviar</button>
+                <br><span id="error-msg" style="font-size: 10px !important; visibility: hidden; color: tomato;">Debes
+                    ingresar un
+                    email
+                    válido</span>
+
+            </label>
+
+        </form>
+    </div>
+    <label id="response" class="company-name" style="color: black !important;visibility: hidden;font-size: 40px">
+        Muchas gracias por su preferencia, pronto nos contactaremos con usted
+    </label>
+    <script>
+        const btn = document.querySelector('.BEmailContacto')
+        const msg = document.querySelector('#error-msg')
+        const correo = document.querySelector('.IEmailContacto')
+        const response = document.querySelector('#response')
+
+        btn.addEventListener('click', function () {
+            if (emailIsValid(correo.value)) {
+                msg.style.visibility = 'hidden'
+
+                const element = document.querySelector('.container')
+                element.classList.add('animated', 'zoomOutUp')
+                setTimeout(() => {
+                    response.style.visibility = 'visible'
+                    response.classList.add('animated', 'zoomInUp')
+
+                }, 1000);
+            } else {
+                msg.style.visibility = 'visible'
+                msg.classList.add('animated', 'fadeInUp')
+            }
+        })
+        function emailIsValid(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+        }
+    </script>
+</body>
+
+</html>
